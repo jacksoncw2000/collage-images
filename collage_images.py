@@ -6,14 +6,16 @@ from PIL import Image, ExifTags
 
 def collage_images(project_folder_name, png_folder_name, randomized_order=True):
 
-    ACTIVE_DIRECTORY_PATH = ''
+    current_working_directory = os.getcwd()
+    print(f"\nCurrent Working Directory: {current_working_directory}")
+
   
     current_date_time = datetime.datetime.now()
     current_date_time = current_date_time.strftime('%Y%m%d_%H%M%S')
 
     print(f'\nCollage Images {current_date_time}')
 
-    image_files = os.listdir(f'{ACTIVE_DIRECTORY_PATH}/source_images/{project_folder_name}/{png_folder_name}')
+    image_files = os.listdir(f'{current_working_directory}/source_images/{project_folder_name}/{png_folder_name}')
 
     images_array = []
 
@@ -40,7 +42,7 @@ def collage_images(project_folder_name, png_folder_name, randomized_order=True):
         percentage_complete = (i + 1) / number_of_images_uploaded * 100
         print(f"{percentage_complete:.2f}% complete")
 
-        image = Image.open(f'{ACTIVE_DIRECTORY_PATH}/source_images/{project_folder_name}/{image}')
+        image = Image.open(f'{current_working_directory}/source_images/{project_folder_name}/{image}')
 
         exif_data = image._getexif()
         if exif_data is not None:
