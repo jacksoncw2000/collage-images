@@ -9,7 +9,6 @@ def collage_images(project_folder_name, png_folder_name, randomized_order=True):
     current_working_directory = os.getcwd()
     print(f"\nCurrent Working Directory: {current_working_directory}")
 
-  
     current_date_time = datetime.datetime.now()
     current_date_time = current_date_time.strftime('%Y%m%d_%H%M%S')
 
