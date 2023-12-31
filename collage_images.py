@@ -13,7 +13,7 @@ def collage_images(project_folder_name, png_folder_name, randomized_order=True):
     current_date_time = datetime.datetime.now()
     current_date_time = current_date_time.strftime('%Y%m%d_%H%M%S')
 
-    print(f'\nCollage Images {current_date_time}')
+    print(f'\nCollage images beginning {current_date_time}')
 
     image_files = os.listdir(f'{current_working_directory}/source_images/{project_folder_name}/{png_folder_name}')
 
@@ -63,6 +63,14 @@ def collage_images(project_folder_name, png_folder_name, randomized_order=True):
         y = i // int(math.sqrt(len(images_array))) * thumbnail_height
 
         collage.paste(image, (x, y))
+
+    folder_name = "outputs"
+    # Check if the outputs folder exists
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)  # Create the outputs folder
+        print(f"Folder '{folder_name}' created.")
+    else:
+        print(f"Folder '{folder_name}' already exists.")
 
     collage.save(f"outputs/Collage {current_date_time}.png")
 
