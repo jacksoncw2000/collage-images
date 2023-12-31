@@ -45,15 +45,15 @@ if __name__ == '__main__':
     # --------------------------------------------
 
 
-    #original_image_name = "IMG_7594"
+    #original_image_name = ""
     #original_image_extension = "HEIC"
     #convert_heic_to_png(original_image_name, original_image_extension)
 
-    #original_image_name = "DSC04722"
+    #original_image_name = ""
     #original_image_extension = "JPG"
     #convert_jpg_to_png(original_image_name, original_image_extension)
 
-    #original_image_name = "Photo of Moose by Harris"
+    #original_image_name = ""
     #original_image_extension = "jpeg"
     #orientation = 1
     #change_image_orientation(original_image_name, original_image_extension, orientation)
