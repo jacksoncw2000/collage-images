@@ -21,17 +21,11 @@ def convert_jpg_to_png(original_image_name, original_image_extension):
 
 if __name__ == '__main__':
 
-    ##---Collage Images---------------------------
-    project_folder_name = ''
-    png_folder_name = ''
-    #collage_images(project_folder_name, png_folder_name, randomized_order=True)
-    ##--------------------------------------------
-
-    # ---Collage Images---------------------------
-    project_folder_name = ''
-    png_folder_name = ''
-    #collage_images(project_folder_name, png_folder_name, randomized_order=True)
-    # --------------------------------------------
+    #---Collage Images---------------------------
+    project_folder_name = 'Test Project'
+    png_folder_name = 'Test Folder'
+    collage_images(project_folder_name, png_folder_name, randomized_order=True)
+    #--------------------------------------------
 
     # ---Batch Convert Images---------------------------
     folder_name = ''
