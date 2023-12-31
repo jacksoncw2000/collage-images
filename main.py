@@ -2,7 +2,7 @@ from PIL import Image
 from pillow_heif import register_heif_opener
 
 from collage_images import collage_images
-from batch_convert_images import batch_convert_images
+#from batch_convert_images import batch_convert_images
 from check_if_duplicate_images import check_if_duplicate_images
 from distribute_images import distribute_images
 
