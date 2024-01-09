@@ -23,4 +23,4 @@ def distribute_images(input_folder, output_base_folder, num_folders):
             dst = os.path.join(output_folder, image)
             shutil.copy(src, dst)
 
-    print("\nDistribute images complete")
+    print("\nDistribute images complete.")
